@@ -1,38 +1,141 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+:root {
+    --ui-primary: #921eff;
+    --white: #ffffff;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  * {
+    margin: 0px;
+    padding: 0px;
+  }
+  .ui-text-primary {
+    color: var(--ui-primary) !important;
+  }
+  .ui-body {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 60px auto 50px;
+    grid-template-areas:
+      "header"
+      "main "
+      "footer ";
+  }
+  .ui-header {
+    max-width: 100vw;
+    grid-area: header;
+  }
+  .ui-aside {
+    grid-area: sidebar;
+    background-color: rgb(255, 18, 18);
+  }
+  .ui-main {
+    grid-area: main;
+  }
+  .ui-footer {
+    grid-area: footer;
+    background: gainsboro;
+    height: 50px;
+    margin-top: 10px;
+  }
+  .ui-element-store {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 10px;
+    height: 100%;
+    width: 100%;
+  }
+  .ui-price {
+    font-weight: 700;
+  }
+  
+  .card {
+    width: 16rem;
+    border: 0px !important;
+    border-radius: 4px !important;
+    overflow: hidden !important;
+  }
+  
+  .card-img-top {
+    border-radius: 0px !important;
+  }
+  
+  .card-body {
+    padding-top: 3px !important;
+    padding-left: 5px !important;
+  }
+  .ui-product-carousel {
+    min-height: 50px;
+  }
+  .ui-product-img {
+    min-height: 50px;
+    background-color: brown;
+  }
+  
+  .ui-product {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+  }
+  
+  .ui-product-carousel-item {
+    width: 100px;
+    height: 100px;
+    background-color: bisque;
+  }
+  .ui-product-carousel {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .ui-product-img {
+    width: 40%;
+    height: 450px;
+  }
+  .ui-product-info {
+    width: 50%;
+    padding: 2%;
+  }
+  .carousel.slide {
+    max-height: 500px;
+    overflow: hidden;
+  }
+  .ui-contenedor-products-items {
+      width: 100%;
+      height: 100px;
+      display: flex;
+      gap: 5px;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+  }
+  .ui-contenedor-products-item {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+  }
+  .ui-contenedor-products{
+      margin-top: 20px;
+  padding: 5px;
+  height: 150px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  gap: 5px;
+  align-content: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  align-items: center;
+  flex-direction: column;
+  
   }
-  to {
-    transform: rotate(360deg);
+  .ui-contenedor-products-title{
+      display: flex;
+      width: 90%;
+      flex-direction: row;
+      justify-content: space-between;
+     
   }
-}
